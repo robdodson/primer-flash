@@ -1,0 +1,80 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, minimum-scale=1.0, initial-scale=1.0, user-scalable=yes">
+    <title>primer-flash Demo</title>
+    <script src="../../webcomponentsjs/webcomponents-lite.js"></script>
+    <link rel="import" href="../primer-flash.html">
+    <style media="screen">
+      body {
+        font-family: "Helvetica Neue", Helvetica, "Segoe UI", Arial, freesans, sans-serif;
+        word-wrap: break-word;
+      }
+      .docs-example {
+        width: 698px;
+        margin-bottom: 16px;
+      }
+    </style>
+  </head>
+  <body>
+
+    <div class="docs-example">
+      <primer-flash>
+        Flash message goes here.
+      </primer-flash>
+    </div>
+
+    <div class="docs-example">
+      <primer-flash>
+        <p>This is a longer flash message in it's own paragraph. It ends up looking something like this. If we keep adding more text, it'll eventually wrap to a new line.</p>
+        <p>And this is another paragraph.</p>
+      </primer-flash>
+    </div>
+
+    <div class="docs-example">
+      <primer-flash>
+        First message goes here.
+      </primer-flash>
+      <primer-flash>
+        Second message goes here.
+      </primer-flash>
+    </div>
+
+    <!-- Bug: https://github.com/Polymer/polymer/issues/1346 -->
+    <!-- <div class="docs-example">
+      <div class="flash-messages">
+        <primer-flash>
+          Flash message goes here.
+        </primer-flash>
+      </div>
+    </div> -->
+
+    <div class="docs-example">
+      <primer-flash class="flash-warn">
+        Flash message goes here.
+      </primer-flash>
+    </div>
+
+    <div class="docs-example">
+      <primer-flash class="flash-error">
+        Flash message goes here.
+      </primer-flash>
+    </div>
+
+    <div class="docs-example">
+      <primer-flash>
+        <h3 class="flash-title">Flash title message goes here.</h3>
+        <p>Second message goes here.</p>
+      </primer-flash>
+    </div>
+
+    <div class="docs-example">
+      <primer-flash>
+        <span class="flash-close">x</span>
+        Dismissable flash message goes here.
+      </primer-flash>
+    </div>
+
+  </body>
+</html>

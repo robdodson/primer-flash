@@ -1,0 +1,114 @@
+:host {
+  box-sizing: border-box;
+  display: block;
+  position: relative;
+  font-size: 14px;
+  line-height: 1.6;
+  color: #246;
+  background-color: #e2eef9;
+  padding: 15px;
+  border: solid 1px #bac6d3;
+  border-radius: 3px;
+}
+
+/* If a primer-flash is followed by another primer-flash */
+:host + :host {
+  margin-top: 5px;
+}
+
+/* Currently host-context is broken in Polymer 0.8 */
+/* https://github.com/Polymer/polymer/issues/1346 */
+/*:host-context(.flash-messages) {
+  margin-top: 15px;
+  margin-bottom: 15px;
+}*/
+
+:host ::content p {
+  margin-top: 0;
+  margin-bottom: 16px;
+}
+
+:host ::content p:last-child {
+  margin-bottom: 0;
+}
+
+:host(.flash-warn) {
+  color: #4c4a42;
+  background-color: #fff9ea;
+  border-color: #dfd8c2;
+}
+
+:host(.flash-error) {
+  color: #911;
+  background-color: #fcdede;
+  border-color: #d2b2b2;
+}
+
+:host ::content .flash-close {
+  float: right;
+  padding: 17px;     // bigger hit area
+  margin-top: -15px; // negative margins to account for bigger padding
+  margin-right: -15px;
+  margin-left: 20px;
+  color: inherit;
+  text-decoration: none;
+  cursor: pointer;
+  opacity: 0.6;
+}
+
+:host ::content .flash-close:hover {
+  opacity: 1;
+}
+
+/* Flashes can have an action button instead of the cross. */
+:host ::content .flash-action {
+  float: right;
+  margin-top: -4px;
+  margin-left: 20px;
+}
+
+/* Make links stand out */
+:host ::content a {
+  font-weight: bold;
+}
+
+/* Add an icon */
+:host(.flash-with-icon) {
+  padding-left: 40px;
+
+  > .octicon {
+    float: left;
+    margin-top: 3px;
+    margin-left: -25px;
+  }
+}
+
+/* Content within flash messages. */
+:host ::content .flash-title {
+  margin-top: 0;
+  margin-bottom: 5px;
+}
+
+// Global notices
+//
+// Useful for site-wide banners and global notifications.
+
+/* .flash-global {
+  padding: 10px;
+  margin-top: -1px;
+  border-width: 1px 0;
+
+  h2,
+  p {
+    margin-top: 0;
+    margin-bottom: 0;
+    font-size: 14px;
+    line-height: 1.4;
+  }
+
+  // Global flashes can have an action buttons too.
+  .flash-action {
+    margin-top: 5px;
+  }
+}
+ */

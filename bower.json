@@ -1,0 +1,29 @@
+{
+  "name": "primer-flash",
+  "version": "0.0.0",
+  "authors": [
+    "Anonymous <anonymous@example.com>"
+  ],
+  "keywords": [
+    "seed",
+    "polymer",
+    "web-components"
+  ],
+  "main": "primer-flash.html",
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/<USERNAME>/seed-element"
+  },
+  "license": "MIT",
+  "homepage": "https://github.com/<USERNAME>/seed-element/",
+  "ignore": [
+    "/.*",
+    "/demo/",
+    "/test/"
+  ],
+  "dependencies": {
+    "polymer": "Polymer/polymer#0.8-preview"
+  },
+  "devDependencies": {
+  }
+}
